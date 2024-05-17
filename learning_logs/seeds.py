@@ -5,3 +5,8 @@ def run():
     Topic.objects.create(text='Advanced Django')
     Topic.objects.create(text='Python Basics')
     Topic.objects.create(text='Machine Learning')
+
+# def print_all():
+#     topics = Topic.objects.all()
+#     for topic in topics:
+#         print(topic.text)
