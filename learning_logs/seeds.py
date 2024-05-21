@@ -1,6 +1,8 @@
 from learning_logs.models import Topic
 
 def run():
+    # Topic.objects.all().delete()
+
     Topic.objects.create(text='Django Basics')
     Topic.objects.create(text='Advanced Django')
     Topic.objects.create(text='Python Basics')
