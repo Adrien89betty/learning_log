@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light mb-4 border">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'learning_logs:index' %}">
             Learning Log</a>
@@ -59,9 +59,19 @@
       </div> <!-- Closes navbar's container -->
     </nav> <!-- End of navbar -->
 
-    {% block content %}
+    <main class="container">
+      <div class="pb-2 mb-2 border-bottom">
+        {% block page_header %}{% endblock page_header %}
+      </div>
 
-    {% endblock content %}
-
+      <div>
+        {% block content %}{% endblock content %}
+      </div>
+    </main>
+    <footer class="footer mt-5 py-2 p-3 text-end border-top bg-body-tertiary">
+      <div class="container-footer">
+        <span class="text-body-secondary">Made with ❤️ by Adrien L'Éveillé, an awesome junior programmer ! 😎</span>
+      </div>
+    </footer>
   </body>
 </html>
