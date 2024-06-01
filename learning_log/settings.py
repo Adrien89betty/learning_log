@@ -131,11 +131,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Répertoires supplémentaires pour les fichiers statiques
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    BASE_DIR / "learning_logs/static",
 ]
 
 # Répertoire pour collecter les fichiers statiques lors de l'utilisation de 'collectstatic'
