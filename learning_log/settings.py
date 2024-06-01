@@ -38,7 +38,7 @@ INSTALLED_APPS = [
 
     # Third party apps.
     'django_bootstrap5',
-    
+
     # Default Django apps.
     'django.contrib.admin',
     'django.contrib.auth',
@@ -132,6 +132,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Répertoires supplémentaires pour les fichiers statiques
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# Répertoire pour collecter les fichiers statiques lors de l'utilisation de 'collectstatic'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
