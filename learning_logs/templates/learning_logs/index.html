@@ -1,7 +1,7 @@
 {% extends 'learning_logs/base.html' %}
 
 {% block page_header %}
-  <div class="p-3 mt-5 mb-4 bg-light border rounded-3">
+  <div class="index-card p-3 mb-4 border rounded-3">
     <div class="container-fluid py-4">
       <h1 class="display-3">Track your learning.</h1>
 
@@ -9,8 +9,10 @@
       topics you're learning about. Whenever you learn something new
       about a topic, make an entry summarizing what you've learned.</p>
 
-      <a class="btn btn-primary btn-lg mt-1"
+      <a class="button-register"
           href="{% url 'accounts:register' %}">Register &raquo;</a>
     </div>
   </div>
 {% endblock page_header %}
+
+

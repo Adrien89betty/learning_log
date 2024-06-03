@@ -14,10 +14,10 @@
     {% bootstrap_javascript %}
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light mb-4 border">
+  <body class="body-container">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top mb-4 border">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'learning_logs:index' %}">
+        <a class="home-link navbar-brand" href="{% url 'learning_logs:index' %}">
             Learning Log</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,7 +54,7 @@
           {% if user.is_authenticated %}
             <form action="{% url 'accounts:logout' %}" method='post'>
               {% csrf_token %}
-              <button name='submit' class='btn btn-outline-secondary btn-sm'>
+              <button name='submit' class='button-logout'>
                 Log out</button>
             </form>
         {% endif %}
@@ -72,7 +72,7 @@
         {% block content %}{% endblock content %}
       </div>
     </main>
-    <footer class="footer mt-5 py-2 p-3 text-end border-top bg-body-tertiary">
+    <footer class="footer mt-5 py-2 p-3 fixed-bottom text-end border-top">
       <div class="container-footer">
         <span class="text-body-secondary">Made with ❤️ by Adrien L'Éveillé, an awesome junior programmer ! 😎</span>
       </div>
