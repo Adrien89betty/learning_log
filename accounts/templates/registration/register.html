@@ -7,15 +7,16 @@
 
 
 {% block content %}
+  <div class="register-form-container">
+    {% if form.errors %}
+      <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
 
-  {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-  {% endif %}
-
-  <form action="{% url 'accounts:register' %}" method='post'>
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% bootstrap_button button_type="submit" content="Register" %}
-  </form>
-
-{% endblock content %}
+    <form action="{% url 'accounts:register' %}" method='post'>
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <button name='submit' class='btn-register'>
+        Register</button>
+    </form>
+  </div>
+  {% endblock content %}
