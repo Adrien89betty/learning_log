@@ -27,5 +27,22 @@
 
 
 .list-group-item {
-  background-color: #F2FAFF;
+  background-color: #FFFDF7 !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.list-group-item a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #DED0B6;
+  transition: 0.2s;
 }
