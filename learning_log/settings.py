@@ -137,6 +137,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     BASE_DIR / "learning_logs/static",
+    BASE_DIR / "accounts/static",
 ]
 
 # Répertoire pour collecter les fichiers statiques lors de l'utilisation de 'collectstatic'
