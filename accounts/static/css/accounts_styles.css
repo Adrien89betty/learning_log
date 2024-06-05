@@ -1,4 +1,4 @@
-.register-form-container {
+.register-form-container, .form-login {
   background-color: #FFFDF7;
   width: 400px;
   margin: auto;
@@ -8,11 +8,11 @@
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
 }
 
-h3 {
+.h3-register, .h2-login {
   text-align: center;
 }
 
-.btn-register {
+.btn-register, .btn-login {
   border: 1px solid black;
   display: block;
   margin: auto;
@@ -25,6 +25,19 @@ h3 {
 }
 
 .btn-register:hover {
+  border: 1px solid #DED0B6;
+  display: block;
+  margin: auto;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #DED0B6;
+  background-color: #FFFDF7;
+  font-family: serif;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
   border: 1px solid #DED0B6;
   display: block;
   margin: auto;
