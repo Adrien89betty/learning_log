@@ -25,6 +25,15 @@
   transition: 0.3s;
 }
 
+.btn-new-topic {
+  background-color: #DED0B6;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-family: serif;
+}
 
 .list-group-item {
   background-color: #FFFDF7 !important;
@@ -40,9 +49,17 @@
   color: black;
 }
 
-.list-group-item a:hover {
+.list-group-item:hover {
+  background-color: #DED0B6 !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  transition: 0.2;
+}
+
+.list-group-item:hover a {
+  color: #FFFDF7;
   text-decoration: none;
   font-weight: bold;
-  color: #DED0B6;
-  transition: 0.2s;
+  transition: 0.2;
 }
