@@ -48,7 +48,18 @@ def new_topic(request):
 
 @login_required
 def delete_topic(request, topic_id):
-    
+    """Delete an existing topic."""
+    topic = Topic.objects.get(id=topic_id)
+    # Make sure the topic belongs to the current user.
+    if topic.owner != request.user:
+        raise Http404
+
+    if request.method == 'POST':
+        topic.delete()
+        return redirect('learning_logs:topics')
+    context = {'topic': topic}
+    return render(request,'learning_logs/delete_topic.html', context)
+
 
 @login_required
 def new_entry(request, topic_id):
@@ -95,6 +106,7 @@ def edit_entry(request, entry_id):
 
 @login_required
 def delete_entry(request, entry_id):
+    """Delete an existing entry."""
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
     # Checks if the topic's owner matches the currently logged in user.
