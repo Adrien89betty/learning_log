@@ -8,9 +8,10 @@
 
   <ul class="list-group border-bottom pb-2 mb-4">
     {% for topic in topics %}
-      <li class="list-group-item">
-        <a href="{% url 'learning_logs:topic' topic.id %}">
-          {{ topic.text }}</a>
+      <li class="list-group-item d-flex">
+        <h5><a href="{% url 'learning_logs:topic' topic.id %}">
+          {{ topic.text }}</a></h5>
+          <a href="{% url 'learning_logs:delete_topic' topic.id %}" class="btn btn-danger ms-auto">Delete</a>
       </li>
     {% empty %}
       <li class="list-group-item border-0">No topics have been added yet.</li>

@@ -14,7 +14,7 @@
   font-family: serif;
 }
 
-.button-register:hover {
+.button-register:hover, .btn-new-post:hover {
   border: 1px solid #DED0B6;
   padding: 5px 15px;
   border-radius: 5px;
@@ -25,7 +25,7 @@
   transition: 0.3s;
 }
 
-.btn-new-topic {
+.btn-new-topic, .btn-new-post {
   background-color: #DED0B6;
   color: black;
   text-decoration: none;
