@@ -88,3 +88,15 @@ def edit_entry(request, entry_id):
 
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
+
+@login_required
+def delete_entry(request, entry_id):
+    entry = Entry.objects.get(id=entry_id)
+    topic = entry.topic
+
+    if request.method == 'POST':
+        entry.delete()
+        return redirect('learning_logs:topic', topic_id=topic.id)
+
+    context = {'entry': entry}
+    return render(request, 'learning_logs/delete_entry.html', context)
