@@ -93,6 +93,9 @@ def edit_entry(request, entry_id):
 def delete_entry(request, entry_id):
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
+    # Checks if the topic's owner matches the currently logged in user.
+    if topic.owner != request.user:
+        raise Http404
 
     if request.method == 'POST':
         entry.delete()
