@@ -60,7 +60,6 @@ def delete_topic(request, topic_id):
     context = {'topic': topic}
     return render(request,'learning_logs/delete_topic.html', context)
 
-
 @login_required
 def new_entry(request, topic_id):
     """Add a new entry for a particular topic."""
