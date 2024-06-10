@@ -47,6 +47,10 @@ def new_topic(request):
     return render(request, 'learning_logs/new_topic.html', context)
 
 @login_required
+def delete_topic(request, topic_id):
+    
+
+@login_required
 def new_entry(request, topic_id):
     """Add a new entry for a particular topic."""
     topic = Topic.objects.get(id=topic_id)

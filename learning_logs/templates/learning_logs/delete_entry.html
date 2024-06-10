@@ -1,13 +1,16 @@
 {% extends "learning_logs/base.html" %}
 
-{% block content %}
-  <h2>Delete Entry</h2>
-  <p>You are about to delete this entry, are you sure ?</p>
+{% block page_header %}
+  <h2>You are about to delete this post, are you sure ? 🧐</h2>
   <p>{{ entry.text }}</p>
+{% endblock page_header %}
+
+{% block content %}
 
   <form method="post">
     {% csrf_token %}
     <button type="submit" class="btn btn-danger">Delete</button>
     <a href="{% url 'learning_logs:topic' entry.topic.id %}" class="btn btn-secondary">Cancel</a>
   </form>
+
 {% endblock content %}
